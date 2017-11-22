@@ -1,4 +1,6 @@
 #include <arduino.h>
+#include "math.h"
+#include "leg.h"
 
-void printDebugMsg(void);
+//void printLeg(leg l);
 

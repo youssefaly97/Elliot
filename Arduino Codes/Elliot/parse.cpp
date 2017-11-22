@@ -1,7 +1,7 @@
 #include "parse.h"
 
 void parseLegXYZ(uint8_t *l, double *x, double *y, double *z){
-  while(Serial.available()>0){
+  while(Serial.available()){
     char c = Serial.read();
     if(c == 'l') *l = Serial.parseInt();
     else if(c == 'x') *x = Serial.parseFloat();

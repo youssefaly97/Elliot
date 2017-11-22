@@ -1,9 +1,6 @@
 #include <arduino.h>
 #include <Servo.h>
 
-#define EPS 1e-6
-//#define debug_mode
-
 #define Femur_Length 92.852
 #define Tibia_Length 164.695
 #define Coxa_Length 23 //not final dimension
@@ -21,7 +18,7 @@ class leg{
     double CoxaAngle = 90, TibiaAngle = 90, FemurAngle = 90;
     double coxaMin = 0, coxaMax = 180, femurMin = 0, femurMax = 180, tibiaMin = 0, tibiaMax = 180;
     double coxaCenter = 90, femurCenter = 90, tibiaCenter = 90;
-    double x,y,z; //actual position
+    double X,Y,Z; //actual position
     
     leg(void);
     

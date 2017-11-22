@@ -1,23 +1,6 @@
 //#include <arduino.h>
 //#include <Servo.h>
 #include "leg.h"
-
-double Adjust_Angle(double x){
-  if(x>180) return 360-x;
-  return x;
-}
- 
-float Fix_Angle(float x) {
-  if(x>1) return 1;
-  if(x<-1) return -1;
-  return x;
-}
-
-int dcmp(float x, float y){
-  if(fabs(x-y)<EPS) return 0; //equal
-  if(x<y) return -1; // x < y
-  return 1; //x > y
-}
     
 leg::leg(){
 }
@@ -82,6 +65,10 @@ bool leg::moveTo_point(double x, double y, double z){ // move to point with IK /
   CoxaAngle = atan(x*100/(y*100));
   FemurAngle = acos(Fix_Angle(z/l))+acos( Fix_Angle((f*f+l*l-t*t)/(2*f*l)));
   TibiaAngle = acos (Fix_Angle((f*f-l*l+t*t)/(2*f*t)));
+
+  X = x; //actual cordinates are not FK calculated for now
+  Y = y;
+  Z = z;
   
   return moveTo_angles(Adjust_Angle(degrees(CoxaAngle)+90),Adjust_Angle(degrees(FemurAngle)),Adjust_Angle(degrees(TibiaAngle)));
 }

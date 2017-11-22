@@ -1,0 +1,1 @@
+This folder contains the technical documents and references for Elliot.

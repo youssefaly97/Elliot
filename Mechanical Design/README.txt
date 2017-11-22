@@ -1,0 +1,1 @@
+This folder contains Autodesk Inventor 2017 Design mechanical assembly and part files.

@@ -1,0 +1,1 @@
+This folder contains the eagle design files for the PCBs as well as the eagle libraries used

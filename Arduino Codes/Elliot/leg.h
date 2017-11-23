@@ -26,13 +26,13 @@ class leg{
     void lim(double cm, double cM, double fm, double fM, double tm, double tM);
     void center(double a, double b, double c);
         
-    bool move_tibia_angle(int x);
-    bool move_femur_angle(int x);
-    bool move_coxa_angle(int x);
+    uint8_t move_tibia_angle(int x);
+    uint8_t move_femur_angle(int x);
+    uint8_t move_coxa_angle(int x);
 
-    bool moveTo_angles(double j, double k, double l);
-    bool moveTo_point(double x, double y, double z);
-    bool move_servo_angle(Joint x,int angle);
+    uint8_t moveTo_angles(double j, double k, double l);
+    uint8_t moveTo_point(double x, double y, double z);
+    uint8_t move_servo_angle(Joint x,int angle);
 
     //void calculateActual(double c, double f, double t);
 };

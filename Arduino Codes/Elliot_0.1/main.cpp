@@ -17,7 +17,7 @@ void loop(){
   double legPos[4][3];
   double X,Y,Z;
   uint8_t L;
-  parseLegXYZ(&L,&X,&Y,&Z);
+  parseLegXYZ(L,X,Y,Z);
   
   legPos[L][0] = X;
   legPos[L][1] = Y;

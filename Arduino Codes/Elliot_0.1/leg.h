@@ -1,9 +1,9 @@
 #include <arduino.h>
 #include <Servo.h>
 
-#define Femur_Length 92.852
-#define Tibia_Length 164.695
-#define Coxa_Length 23 //not final dimension
+#define Femur_Length 92.85
+#define Tibia_Length 164.439
+#define Coxa_Length 35.056
 
 double Adjust_Angle(double x);
 float Fix_Angle(float x);

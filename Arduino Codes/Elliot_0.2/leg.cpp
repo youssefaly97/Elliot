@@ -90,9 +90,15 @@ void calculateActual(double c, double f, double t){ // calculate actuall coordia
 }
 */
 void updateLegs(leg &leg0, leg &leg1, leg &leg2, leg &leg3){
+  /*
   leg0.moveToPoint(leg0.X,leg0.Y,leg0.Z);
   leg1.moveToPoint(leg1.X,leg1.Y,leg1.Z);
   leg2.moveToPoint(leg2.X,leg2.Y,leg2.Z);
   leg3.moveToPoint(leg3.X,leg3.Y,leg3.Z);
+  */
+  leg0.moveToAngles(leg0.CoxaAngle,leg0.FemurAngle,leg0.TibiaAngle);
+  leg1.moveToAngles(leg1.CoxaAngle,leg1.FemurAngle,leg1.TibiaAngle);
+  leg2.moveToAngles(leg2.CoxaAngle,leg2.FemurAngle,leg2.TibiaAngle);
+  leg3.moveToAngles(leg3.CoxaAngle,leg3.FemurAngle,leg3.TibiaAngle);
 }
 

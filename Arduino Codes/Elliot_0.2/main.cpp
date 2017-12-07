@@ -14,19 +14,20 @@ void setup(){
   legs[2] = leg(c5,f5,t5);
   legs[3] = leg(ca,fa,ta);
 
+  /*
   //set the initial positions of each leg to XYZ 0,80,80
-  for(int i=0; i<4; i++){
-    legs[i].X = 0;
-    legs[i].Y = 80;
-    legs[i].Z = 80;
-  }
+  for(int i=0; i<4; i++) legs[i].moveToPoint(0,80,80);
 
   //apply the previously set leg positions
   updateLegs(legs[0],legs[1],legs[2],legs[3]);
+  */
+  collapse();
 }
 
 void loop(){
   parseCommand();
+  //legs[0].Z = 0;
+  //Serial.println(legs[0].CoxaAngle);
   updateLegs(legs[0],legs[1],legs[2],legs[3]);
 }
 

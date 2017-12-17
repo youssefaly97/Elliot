@@ -34,9 +34,5 @@ namespace NoNameQuad_GUI
             return toSend;
         }
 
-        //public static byte[] moverobot()
-        //{
-        //    TODO
-        //}
     }
 }

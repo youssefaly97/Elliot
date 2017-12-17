@@ -18,7 +18,7 @@ namespace NoNameQuad_GUI
 
         public void SendString(string x)
         {
-            MessageBox.Show("TEHEHEHE");
+            MessageBox.Show("String Send");
             if (!serialPort.IsOpen)
             {
                 try

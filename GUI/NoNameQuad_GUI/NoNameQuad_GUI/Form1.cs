@@ -31,22 +31,33 @@ namespace NoNameQuad_GUI
 
         private void button_applyChanges_t1_Click(object sender, EventArgs e)
         {
-            if (checkbox_leg_t1.Checked == false)
-                myController.moveServo(byte.Parse(comboBox_legNumber_t1.Text), byte.Parse(textbox_alpha_t1.Text), byte.Parse(textbox_beta_t1.Text), byte.Parse(textbox_gamma_t1.Text));
-            else
-                for(byte i=0;i<4;++i)
-                    myController.moveServo(i, byte.Parse(textbox_alpha_t1.Text), byte.Parse(textbox_beta_t1.Text), byte.Parse(textbox_gamma_t1.Text));
-        }
+            try
+            {
+                if (checkbox_leg_t1.Checked == false)
+                    myController.moveServo(byte.Parse(comboBox_legNumber_t1.Text), byte.Parse(textbox_alpha_t1.Text), byte.Parse(textbox_beta_t1.Text), byte.Parse(textbox_gamma_t1.Text));
+                else
+                    for (byte i = 0; i < 4; ++i)
+                        myController.moveServo(i, byte.Parse(textbox_alpha_t1.Text), byte.Parse(textbox_beta_t1.Text), byte.Parse(textbox_gamma_t1.Text));
+            }
+            catch
+            {
+                MessageBox.Show("ERROR");
+
+            }
+       }
 
         private void button_apply_t2_Click(object sender, EventArgs e)
         {
             try
             {
-                myController.moveLeg(byte.Parse(comboBox_legChoice_t2.Text), byte.Parse(textbox_xHold_t2.Text), byte.Parse(textbox_yHold_t2.Text), byte.Parse(textbox_zHold_t2.Text));
+                myController.moveLeg(int.Parse(comboBox_legChoice_t2.Text), int.Parse(textbox_xHold_t2.Text), int.Parse(textbox_yHold_t2.Text), int.Parse(textbox_zHold_t2.Text));
+                label_xCoord_t2.Text = "X: " + comboBox_legChoice_t2.Text;
+                label_xCoord_t2.Text = "Y: " + comboBox_legChoice_t2.Text;
+                label_xCoord_t2.Text = "Z: " + comboBox_legChoice_t2.Text;
             }
             catch
             {
-
+                MessageBox.Show("ERROR");
             }
          }
 

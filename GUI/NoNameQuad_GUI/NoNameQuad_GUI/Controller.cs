@@ -31,33 +31,33 @@ namespace NoNameQuad_GUI
         }
 
 
-        public void moveLeg(byte l,byte x,byte y,byte z)
+        public void moveLeg(int l,int x,int y,int z)
         {
             if (this.mode == 'b')
             {
                 byte[] sentData = new byte[4];
-                sentData = Byte_Signal.moveLeg(l, x, y, z);
+                sentData = Byte_Signal.moveLeg((byte)l, (byte)x, (byte)y, (byte)z);
                 byteTrans.SendByteArray(sentData);
             }
             else
             {
-                string sentDataString = String_Signal.moveLeg("C10L" + l + 'x' + x + 'y' + y + 'z' + z);
+                string sentDataString = String_Signal.moveLeg(l,x,y,z);
                 stringTrans.SendString(sentDataString);
             }
 
         }
 
-        public void moveServo(byte l, byte alpha, byte beta, byte gamma)
+        public void moveServo(int l, int alpha, int beta, int gamma)
         {
             if (this.mode == 'b')
             {
                 byte[] sentData = new byte[4];
-                sentData = Byte_Signal.moveServo(l, alpha, beta, gamma);
+                sentData = Byte_Signal.moveServo((byte)l, (byte)alpha, (byte)beta, (byte)gamma);
                 byteTrans.SendByteArray(sentData);
             }
             else
             {
-                string sentDataString = String_Signal.moveServo("C11L" + l + 'c' + alpha + 'f' + beta + 't' + gamma);
+                string sentDataString = String_Signal.moveServo(l,alpha,beta,gamma);
                 stringTrans.SendString(sentDataString);
             }
 

@@ -1,0 +1,26 @@
+
+For anyone working/ contributing on this project.
+
+If you are creating a class be sure to follow the instructions written in the classes Summary text file
+If you are creating a method that sends a signal to the arduino be sure to follow the instructions written in the signal_to_arudino_format text file
+
+Additional Guidelines:
+
+1)Variable Naming:
+Do not use haphazard names as int x or string s as that will lead to conflicts in the commits that will be hard to find
+
+Accepted Variable naming
+
+"object_type"_"your chosen name"_"What part of program it belongs to"
+
+example:
+label_servo5_tab2
+
+or if it belongs to a given class just make sure the name is elaborate enough to not be confused with other names and be easy in solving conflicts
+
+example:
+ServoAngle_Gamma_Degree
+Leg2_Position_X
+Leg2_position_y
+
+and so on

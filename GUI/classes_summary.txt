@@ -1,0 +1,18 @@
+Everytime you create a class please make sure to
+1) comment it your class to make your code clear and easy to debug
+2) Write next to each method what arguments the method takes. The variables it uses and what it returns
+3) Summarize the class here using a UML type summary (not nessecarily formal but so other coders will understand)
+
+-------------------------------------------
+Eg:
+
+Class ServoMover:
+    Public Varibles: ...
+    Private Variables: ...
+    Private Methods: ...
+    Public Methods: ..
+    Static methods.....
+
+(There is no need to explain in detail here just note a small sumarry like the one above)
+
+---------------------------------------------------

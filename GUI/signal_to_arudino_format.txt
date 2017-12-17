@@ -1,0 +1,13 @@
+
+This file refers to the strings that will be sent to the arduino from the C# program.
+If you are responsible for writing a function which creates a string to be sent to the arduino be sure to write clear explaination of the format of the signal
+
+for example
+
+Servo Move Signal:
+Example:
+SM 5 8
+Format:
+"SM" (two letters), Two ints indicating leg number ((5)), and servo number ((8)) respectively
+
+-----------------------------------------------------

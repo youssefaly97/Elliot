@@ -70,26 +70,27 @@
             this.label_Serv0_t3 = new System.Windows.Forms.Label();
             this.label_Serv180_t3 = new System.Windows.Forms.Label();
             this.label_Serv90_t3 = new System.Windows.Forms.Label();
-            this.tabPage4 = new System.Windows.Forms.TabPage();
             this.tabPage5 = new System.Windows.Forms.TabPage();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.pictureBox_inverseK_t1 = new System.Windows.Forms.PictureBox();
             this.pictureBox_servos_t2 = new System.Windows.Forms.PictureBox();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.button7 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.tabPage3.SuspendLayout();
-            this.tabPage4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_inverseK_t1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_servos_t2)).BeginInit();
+            this.tabPage4.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -99,13 +100,16 @@
             this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Controls.Add(this.tabPage4);
             this.tabControl1.Location = new System.Drawing.Point(-3, -2);
+            this.tabControl1.Margin = new System.Windows.Forms.Padding(0);
             this.tabControl1.Name = "tabControl1";
+            this.tabControl1.Padding = new System.Drawing.Point(0, 0);
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(605, 298);
             this.tabControl1.TabIndex = 0;
             // 
             // tabPage1
             // 
+            this.tabPage1.BackgroundImage = global::NoNameQuad_GUI.Properties.Resources.Capture;
             this.tabPage1.Controls.Add(this.label2);
             this.tabPage1.Controls.Add(this.panel2);
             this.tabPage1.Controls.Add(this.checkbox_leg_t1);
@@ -131,6 +135,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.label2.Location = new System.Drawing.Point(35, 66);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(57, 13);
@@ -150,6 +155,7 @@
             // radioButton3
             // 
             this.radioButton3.AutoSize = true;
+            this.radioButton3.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.radioButton3.Location = new System.Drawing.Point(74, 5);
             this.radioButton3.Name = "radioButton3";
             this.radioButton3.Size = new System.Drawing.Size(46, 17);
@@ -162,6 +168,7 @@
             // radioButton4
             // 
             this.radioButton4.AutoSize = true;
+            this.radioButton4.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.radioButton4.Location = new System.Drawing.Point(3, 5);
             this.radioButton4.Name = "radioButton4";
             this.radioButton4.Size = new System.Drawing.Size(52, 17);
@@ -174,6 +181,7 @@
             // checkbox_leg_t1
             // 
             this.checkbox_leg_t1.AutoSize = true;
+            this.checkbox_leg_t1.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.checkbox_leg_t1.Location = new System.Drawing.Point(247, 27);
             this.checkbox_leg_t1.Name = "checkbox_leg_t1";
             this.checkbox_leg_t1.Size = new System.Drawing.Size(63, 17);
@@ -208,6 +216,7 @@
             // label_gamma_t1
             // 
             this.label_gamma_t1.AutoSize = true;
+            this.label_gamma_t1.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.label_gamma_t1.Location = new System.Drawing.Point(35, 177);
             this.label_gamma_t1.Name = "label_gamma_t1";
             this.label_gamma_t1.Size = new System.Drawing.Size(43, 13);
@@ -218,6 +227,7 @@
             // label_beta_t1
             // 
             this.label_beta_t1.AutoSize = true;
+            this.label_beta_t1.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.label_beta_t1.Location = new System.Drawing.Point(35, 134);
             this.label_beta_t1.Name = "label_beta_t1";
             this.label_beta_t1.Size = new System.Drawing.Size(29, 13);
@@ -228,6 +238,7 @@
             // label_alpha_t1
             // 
             this.label_alpha_t1.AutoSize = true;
+            this.label_alpha_t1.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.label_alpha_t1.Location = new System.Drawing.Point(35, 93);
             this.label_alpha_t1.Name = "label_alpha_t1";
             this.label_alpha_t1.Size = new System.Drawing.Size(34, 13);
@@ -238,6 +249,7 @@
             // label_legnumber_t1
             // 
             this.label_legnumber_t1.AutoSize = true;
+            this.label_legnumber_t1.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.label_legnumber_t1.Location = new System.Drawing.Point(35, 28);
             this.label_legnumber_t1.Name = "label_legnumber_t1";
             this.label_legnumber_t1.Size = new System.Drawing.Size(65, 13);
@@ -264,9 +276,9 @@
             // 
             // button_applyChanges_t1
             // 
-            this.button_applyChanges_t1.Location = new System.Drawing.Point(108, 211);
+            this.button_applyChanges_t1.Location = new System.Drawing.Point(114, 216);
             this.button_applyChanges_t1.Name = "button_applyChanges_t1";
-            this.button_applyChanges_t1.Size = new System.Drawing.Size(106, 33);
+            this.button_applyChanges_t1.Size = new System.Drawing.Size(100, 33);
             this.button_applyChanges_t1.TabIndex = 13;
             this.button_applyChanges_t1.Text = "Apply Changes";
             this.button_applyChanges_t1.UseVisualStyleBackColor = true;
@@ -275,6 +287,7 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.BackgroundImage = global::NoNameQuad_GUI.Properties.Resources.Capture;
             this.tabPage2.Controls.Add(this.label1);
             this.tabPage2.Controls.Add(this.panel1);
             this.tabPage2.Controls.Add(this.textbox_xHold_t2);
@@ -294,7 +307,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(597, 272);
+            this.tabPage2.Size = new System.Drawing.Size(588, 272);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Inverse Kinematics";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -303,6 +316,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.label1.Location = new System.Drawing.Point(39, 52);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(57, 13);
@@ -321,6 +335,7 @@
             // radioButton2
             // 
             this.radioButton2.AutoSize = true;
+            this.radioButton2.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.radioButton2.Location = new System.Drawing.Point(74, 5);
             this.radioButton2.Name = "radioButton2";
             this.radioButton2.Size = new System.Drawing.Size(46, 17);
@@ -333,6 +348,7 @@
             // radioButton1
             // 
             this.radioButton1.AutoSize = true;
+            this.radioButton1.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.radioButton1.Location = new System.Drawing.Point(3, 5);
             this.radioButton1.Name = "radioButton1";
             this.radioButton1.Size = new System.Drawing.Size(52, 17);
@@ -390,6 +406,7 @@
             // label_zHold_t2
             // 
             this.label_zHold_t2.AutoSize = true;
+            this.label_zHold_t2.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.label_zHold_t2.Location = new System.Drawing.Point(61, 207);
             this.label_zHold_t2.Name = "label_zHold_t2";
             this.label_zHold_t2.Size = new System.Drawing.Size(14, 13);
@@ -399,6 +416,7 @@
             // label_yHold_t2
             // 
             this.label_yHold_t2.AutoSize = true;
+            this.label_yHold_t2.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.label_yHold_t2.Location = new System.Drawing.Point(61, 161);
             this.label_yHold_t2.Name = "label_yHold_t2";
             this.label_yHold_t2.Size = new System.Drawing.Size(14, 13);
@@ -408,6 +426,7 @@
             // label_xHold_t2
             // 
             this.label_xHold_t2.AutoSize = true;
+            this.label_xHold_t2.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.label_xHold_t2.Location = new System.Drawing.Point(61, 119);
             this.label_xHold_t2.Name = "label_xHold_t2";
             this.label_xHold_t2.Size = new System.Drawing.Size(14, 13);
@@ -417,6 +436,7 @@
             // label_zCoord_t2
             // 
             this.label_zCoord_t2.AutoSize = true;
+            this.label_zCoord_t2.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.label_zCoord_t2.Location = new System.Drawing.Point(287, 88);
             this.label_zCoord_t2.Name = "label_zCoord_t2";
             this.label_zCoord_t2.Size = new System.Drawing.Size(48, 13);
@@ -426,6 +446,7 @@
             // label_yCoord_t2
             // 
             this.label_yCoord_t2.AutoSize = true;
+            this.label_yCoord_t2.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.label_yCoord_t2.Location = new System.Drawing.Point(216, 88);
             this.label_yCoord_t2.Name = "label_yCoord_t2";
             this.label_yCoord_t2.Size = new System.Drawing.Size(48, 13);
@@ -435,6 +456,7 @@
             // label_xCoord_t2
             // 
             this.label_xCoord_t2.AutoSize = true;
+            this.label_xCoord_t2.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.label_xCoord_t2.Location = new System.Drawing.Point(140, 88);
             this.label_xCoord_t2.Name = "label_xCoord_t2";
             this.label_xCoord_t2.Size = new System.Drawing.Size(48, 13);
@@ -444,6 +466,7 @@
             // label_currCoordinates_t2
             // 
             this.label_currCoordinates_t2.AutoSize = true;
+            this.label_currCoordinates_t2.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.label_currCoordinates_t2.Location = new System.Drawing.Point(22, 88);
             this.label_currCoordinates_t2.Name = "label_currCoordinates_t2";
             this.label_currCoordinates_t2.Size = new System.Drawing.Size(100, 13);
@@ -453,6 +476,7 @@
             // label_legNumber_t2
             // 
             this.label_legNumber_t2.AutoSize = true;
+            this.label_legNumber_t2.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.label_legNumber_t2.Location = new System.Drawing.Point(39, 26);
             this.label_legNumber_t2.Name = "label_legNumber_t2";
             this.label_legNumber_t2.Size = new System.Drawing.Size(65, 13);
@@ -461,6 +485,7 @@
             // 
             // tabPage3
             // 
+            this.tabPage3.BackgroundImage = global::NoNameQuad_GUI.Properties.Resources.Capture;
             this.tabPage3.Controls.Add(this.button_Serv0_t3);
             this.tabPage3.Controls.Add(this.button_Serv180_t3);
             this.tabPage3.Controls.Add(this.button_Serv90_t3);
@@ -470,14 +495,14 @@
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(597, 272);
+            this.tabPage3.Size = new System.Drawing.Size(588, 272);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Servo Calibration";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
             // button_Serv0_t3
             // 
-            this.button_Serv0_t3.Location = new System.Drawing.Point(189, 126);
+            this.button_Serv0_t3.Location = new System.Drawing.Point(189, 121);
             this.button_Serv0_t3.Name = "button_Serv0_t3";
             this.button_Serv0_t3.Size = new System.Drawing.Size(75, 23);
             this.button_Serv0_t3.TabIndex = 5;
@@ -487,7 +512,7 @@
             // 
             // button_Serv180_t3
             // 
-            this.button_Serv180_t3.Location = new System.Drawing.Point(189, 86);
+            this.button_Serv180_t3.Location = new System.Drawing.Point(189, 81);
             this.button_Serv180_t3.Name = "button_Serv180_t3";
             this.button_Serv180_t3.Size = new System.Drawing.Size(75, 23);
             this.button_Serv180_t3.TabIndex = 4;
@@ -496,7 +521,7 @@
             // 
             // button_Serv90_t3
             // 
-            this.button_Serv90_t3.Location = new System.Drawing.Point(189, 46);
+            this.button_Serv90_t3.Location = new System.Drawing.Point(189, 41);
             this.button_Serv90_t3.Name = "button_Serv90_t3";
             this.button_Serv90_t3.Size = new System.Drawing.Size(75, 23);
             this.button_Serv90_t3.TabIndex = 3;
@@ -506,6 +531,7 @@
             // label_Serv0_t3
             // 
             this.label_Serv0_t3.AutoSize = true;
+            this.label_Serv0_t3.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.label_Serv0_t3.Location = new System.Drawing.Point(52, 126);
             this.label_Serv0_t3.Name = "label_Serv0_t3";
             this.label_Serv0_t3.Size = new System.Drawing.Size(109, 13);
@@ -515,6 +541,7 @@
             // label_Serv180_t3
             // 
             this.label_Serv180_t3.AutoSize = true;
+            this.label_Serv180_t3.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.label_Serv180_t3.Location = new System.Drawing.Point(52, 86);
             this.label_Serv180_t3.Name = "label_Serv180_t3";
             this.label_Serv180_t3.Size = new System.Drawing.Size(121, 13);
@@ -525,27 +552,12 @@
             // label_Serv90_t3
             // 
             this.label_Serv90_t3.AutoSize = true;
+            this.label_Serv90_t3.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.label_Serv90_t3.Location = new System.Drawing.Point(52, 46);
             this.label_Serv90_t3.Name = "label_Serv90_t3";
             this.label_Serv90_t3.Size = new System.Drawing.Size(115, 13);
             this.label_Serv90_t3.TabIndex = 0;
             this.label_Serv90_t3.Text = "Calibrate Servos to 90°";
-            // 
-            // tabPage4
-            // 
-            this.tabPage4.Controls.Add(this.button7);
-            this.tabPage4.Controls.Add(this.button6);
-            this.tabPage4.Controls.Add(this.button5);
-            this.tabPage4.Controls.Add(this.button4);
-            this.tabPage4.Controls.Add(this.button3);
-            this.tabPage4.Controls.Add(this.button2);
-            this.tabPage4.Controls.Add(this.button1);
-            this.tabPage4.Location = new System.Drawing.Point(4, 22);
-            this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Size = new System.Drawing.Size(597, 272);
-            this.tabPage4.TabIndex = 0;
-            this.tabPage4.Text = "Robot Movement";
-            this.tabPage4.UseVisualStyleBackColor = true;
             // 
             // tabPage5
             // 
@@ -553,51 +565,6 @@
             this.tabPage5.Name = "tabPage5";
             this.tabPage5.Size = new System.Drawing.Size(200, 100);
             this.tabPage5.TabIndex = 0;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(119, 3);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(92, 74);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Forward";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(11, 90);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(92, 74);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "button4";
-            this.button4.UseVisualStyleBackColor = true;
-            // 
-            // button5
-            // 
-            this.button5.Location = new System.Drawing.Point(368, 51);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(92, 152);
-            this.button5.TabIndex = 4;
-            this.button5.Text = "button5";
-            this.button5.UseVisualStyleBackColor = true;
-            // 
-            // button6
-            // 
-            this.button6.Location = new System.Drawing.Point(479, 51);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(92, 152);
-            this.button6.TabIndex = 5;
-            this.button6.Text = "button6";
-            this.button6.UseVisualStyleBackColor = true;
-            // 
-            // button7
-            // 
-            this.button7.Location = new System.Drawing.Point(119, 90);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(92, 74);
-            this.button7.TabIndex = 6;
-            this.button7.Text = "button7";
-            this.button7.UseVisualStyleBackColor = true;
             // 
             // pictureBox_inverseK_t1
             // 
@@ -620,20 +587,86 @@
             this.pictureBox_servos_t2.TabStop = false;
             this.pictureBox_servos_t2.Click += new System.EventHandler(this.pictureBox_servos_t2_Click);
             // 
+            // tabPage4
+            // 
+            this.tabPage4.BackgroundImage = global::NoNameQuad_GUI.Properties.Resources.Capture;
+            this.tabPage4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.tabPage4.Controls.Add(this.button7);
+            this.tabPage4.Controls.Add(this.button6);
+            this.tabPage4.Controls.Add(this.button5);
+            this.tabPage4.Controls.Add(this.button4);
+            this.tabPage4.Controls.Add(this.button3);
+            this.tabPage4.Controls.Add(this.button2);
+            this.tabPage4.Controls.Add(this.button1);
+            this.tabPage4.Location = new System.Drawing.Point(4, 22);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Size = new System.Drawing.Size(588, 272);
+            this.tabPage4.TabIndex = 0;
+            this.tabPage4.Text = "Robot Movement";
+            this.tabPage4.UseVisualStyleBackColor = true;
+            // 
+            // button7
+            // 
+            this.button7.BackColor = System.Drawing.Color.Transparent;
+            this.button7.BackgroundImage = global::NoNameQuad_GUI.Properties.Resources.Celtic_style_crossed_circle_svg;
+            this.button7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button7.Location = new System.Drawing.Point(119, 90);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(92, 74);
+            this.button7.TabIndex = 6;
+            this.button7.UseVisualStyleBackColor = false;
+            // 
+            // button6
+            // 
+            this.button6.BackColor = System.Drawing.Color.Transparent;
+            this.button6.BackgroundImage = global::NoNameQuad_GUI.Properties.Resources.rotd7;
+            this.button6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button6.FlatAppearance.BorderSize = 0;
+            this.button6.Location = new System.Drawing.Point(479, 51);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(92, 152);
+            this.button6.TabIndex = 5;
+            this.button6.UseVisualStyleBackColor = false;
+            // 
+            // button5
+            // 
+            this.button5.BackColor = System.Drawing.Color.Transparent;
+            this.button5.BackgroundImage = global::NoNameQuad_GUI.Properties.Resources.rotate_left_circular_arrow_interface_symbol_318_48657;
+            this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button5.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.button5.FlatAppearance.BorderSize = 0;
+            this.button5.Location = new System.Drawing.Point(368, 51);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(92, 152);
+            this.button5.TabIndex = 4;
+            this.button5.UseVisualStyleBackColor = false;
+            // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.Color.Transparent;
+            this.button4.BackgroundImage = global::NoNameQuad_GUI.Properties.Resources.left;
+            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button4.Location = new System.Drawing.Point(11, 90);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(92, 74);
+            this.button4.TabIndex = 3;
+            this.button4.UseVisualStyleBackColor = false;
+            // 
             // button3
             // 
-            this.button3.BackgroundImage = global::NoNameQuad_GUI.Properties.Resources._130900___Copy__3_;
+            this.button3.BackColor = System.Drawing.Color.Transparent;
+            this.button3.BackgroundImage = global::NoNameQuad_GUI.Properties.Resources.right;
             this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button3.Location = new System.Drawing.Point(229, 90);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(92, 74);
             this.button3.TabIndex = 2;
-            this.button3.Text = "button3";
-            this.button3.UseVisualStyleBackColor = true;
+            this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click_1);
             // 
             // button2
             // 
+            this.button2.BackColor = System.Drawing.Color.Transparent;
             this.button2.BackgroundImage = global::NoNameQuad_GUI.Properties.Resources._130900;
             this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button2.ForeColor = System.Drawing.SystemColors.ControlText;
@@ -641,12 +674,24 @@
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(92, 74);
             this.button2.TabIndex = 1;
-            this.button2.UseVisualStyleBackColor = true;
+            this.button2.UseVisualStyleBackColor = false;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Transparent;
+            this.button1.BackgroundImage = global::NoNameQuad_GUI.Properties.Resources.up;
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button1.Location = new System.Drawing.Point(119, 3);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(92, 74);
+            this.button1.TabIndex = 0;
+            this.button1.UseVisualStyleBackColor = false;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::NoNameQuad_GUI.Properties.Resources.Capture;
             this.ClientSize = new System.Drawing.Size(602, 296);
             this.Controls.Add(this.tabControl1);
             this.Name = "Form1";
@@ -662,9 +707,9 @@
             this.panel1.PerformLayout();
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
-            this.tabPage4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_inverseK_t1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_servos_t2)).EndInit();
+            this.tabPage4.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -725,10 +770,11 @@
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private System.Windows.Forms.Button button4;
     }
 }
 

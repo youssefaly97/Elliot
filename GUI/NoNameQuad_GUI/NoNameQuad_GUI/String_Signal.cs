@@ -49,6 +49,11 @@ namespace NoNameQuad_GUI
             }
             return "C12";
         }
+        public static string moveToIntial(string command)
+        {
+            
+            return "C15";
+        }
         public static string rotateRobot(string command)
         {
             switch (command)
